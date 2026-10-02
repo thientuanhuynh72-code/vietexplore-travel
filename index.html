@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VietExplore Travel - Khám phá Việt Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#home"><span>✦</span> VietExplore</a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="#home">Trang chủ</a>
+      <a href="#tours">Tour</a>
+      <a href="#products">Sản phẩm</a>
+      <a href="#about">Về chúng tôi</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <a class="btn btn-small" href="#booking">Đặt tour</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <span class="eyebrow">TRAVEL • EXPLORE • EXPERIENCE</span>
+    <h1>Khám phá Việt Nam<br><span>theo cách của bạn</span></h1>
+    <p>Những hành trình nhỏ, những trải nghiệm đáng nhớ và những điểm đến tuyệt đẹp đang chờ bạn.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#tours">Khám phá tour →</a>
+      <a class="btn btn-light" href="#products">Xem sản phẩm</a>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container two-col">
+    <div>
+      <span class="eyebrow dark">VỀ VIETEXPLORE</span>
+      <h2>Đi để khám phá,<br>đi để trải nghiệm.</h2>
+    </div>
+    <p>VietExplore Travel là website mô phỏng giới thiệu các tour và sản phẩm du lịch trong nước. Chúng tôi tập trung vào những hành trình dễ tiếp cận, lịch trình rõ ràng và trải nghiệm phù hợp với người trẻ, gia đình và nhóm bạn.</p>
+  </div>
+</section>
+
+<section class="section soft" id="tours">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow dark">ĐIỂM ĐẾN NỔI BẬT</span><h2>Tour được yêu thích</h2></div>
+      <span class="section-note">Dữ liệu minh họa • Không giao dịch thật</span>
+    </div>
+    <div class="cards" id="tourGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow dark">SẢN PHẨM DU LỊCH</span><h2>Chuẩn bị cho chuyến đi</h2></div>
+    </div>
+    <div class="products" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="container banner-inner">
+    <div><span class="eyebrow">YOUR NEXT ADVENTURE</span><h2>Bạn đã sẵn sàng lên đường?</h2><p>Chọn một hành trình và bắt đầu chuyến đi của riêng bạn.</p></div>
+    <a class="btn btn-light" href="#tours">Xem tất cả tour</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image"></div>
+      <div>
+        <span class="eyebrow dark">VỀ CHÚNG TÔI</span>
+        <h2>Nhỏ gọn, rõ ràng và dễ khám phá.</h2>
+        <p>Website được xây dựng nhằm mô phỏng một nền tảng giới thiệu sản phẩm du lịch. Mọi thông tin về tour, giá và đánh giá đều là dữ liệu mẫu phục vụ học tập.</p>
+        <div class="stats"><div><b>06+</b><span>Điểm đến</span></div><div><b>12+</b><span>Sản phẩm</span></div><div><b>100%</b><span>Demo</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="booking">
+  <div class="container booking-wrap">
+    <div>
+      <span class="eyebrow dark">ĐẶT TOUR DEMO</span>
+      <h2>Giữ chỗ cho hành trình</h2>
+      <p>Điền thông tin bên cạnh để mô phỏng quy trình đặt tour. Không phát sinh thanh toán.</p>
+      <div class="demo-note">✓ Không thanh toán thật<br>✓ Không lưu dữ liệu cá nhân<br>✓ Chỉ dùng cho mục đích trình diễn</div>
+    </div>
+    <form class="form" id="bookingForm">
+      <label>Chọn tour<select id="tourSelect" required></select></label>
+      <div class="form-row"><label>Họ và tên<input id="name" required placeholder="Nguyễn Văn A"></label><label>Số người<input id="people" type="number" min="1" value="2" required></label></div>
+      <div class="form-row"><label>Số điện thoại<input id="phone" required placeholder="09xx xxx xxx"></label><label>Ngày dự kiến<input id="date" type="date" required></label></div>
+      <label>Email<input id="email" type="email" placeholder="email@example.com"></label>
+      <label>Ghi chú<textarea id="note" rows="3" placeholder="Yêu cầu thêm..."></textarea></label>
+      <button class="btn" type="submit">Xác nhận đặt tour →</button>
+    </form>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+    <div><span class="eyebrow dark">LIÊN HỆ</span><h2>Hãy để chúng tôi đồng hành.</h2><p>Thông tin dưới đây là thông tin giả lập cho website demo.</p></div>
+    <div class="contact-info"><div><b>☎ Hotline</b><span>0900 123 456</span></div><div><b>✉ Email</b><span>hello@vietexplore.demo</span></div><div><b>⌖ Địa chỉ</b><span>123 Đường Biển, Nha Trang</span></div></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div class="logo"><span>✦</span> VietExplore</div><p>Website mô phỏng phục vụ mục đích học tập • Không phát sinh giao dịch thực tế.</p><div>© 2026 VietExplore Travel</div></div></footer>
+
+<div class="modal" id="tourModal">
+  <div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
